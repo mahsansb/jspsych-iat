@@ -7,15 +7,14 @@
     <link href="https://unpkg.com/jspsych@7.3.0/css/jspsych.css" rel="stylesheet" />
   </head>
   <body>
-    <script>
-      const jsPsych = initJsPsych();
-
-      var hello_trial = {
-        type: 'html-keyboard-response',
-        stimulus: '<h2>Hello Mahsa! jsPsych is working 🎉<br><br>Press any key to finish.</h2>'
-      };
-
-      jsPsych.run([hello_trial]);
-    </script>
-  </body>
+  <h1>If you see this, the page is loading!</h1>
+  <script>
+    const jsPsych = initJsPsych();
+    var hello_trial = {
+      type: 'html-keyboard-response',
+      stimulus: '<h2>Hello Mahsa! jsPsych is working 🎉<br><br>Press any key to finish.</h2>'
+    };
+    jsPsych.run([hello_trial]);
+  </script>
+</body>
 </html>
