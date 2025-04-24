@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,6 +7,15 @@
     <link href="https://unpkg.com/jspsych@7.3.0/css/jspsych.css" rel="stylesheet" />
   </head>
   <body>
-    <script src="basic-script.js"></script>
+    <script>
+      const jsPsych = initJsPsych();
+
+      var hello_trial = {
+        type: 'html-keyboard-response',
+        stimulus: '<h2>Hello Mahsa! jsPsych is working 🎉<br><br>Press any key to finish.</h2>'
+      };
+
+      jsPsych.run([hello_trial]);
+    </script>
   </body>
 </html>
