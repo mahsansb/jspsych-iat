@@ -2,25 +2,36 @@
 <html>
   <head>
     <title>jsPsych Test</title>
+
+    <!-- Load jsPsych core -->
     <script src="https://cdn.jsdelivr.net/npm/jspsych@7.3.0/dist/jspsych.js"></script>
+
+    <!-- Load the html-keyboard-response plugin -->
     <script src="https://cdn.jsdelivr.net/npm/@jspsych/plugin-html-keyboard-response@1.1.2/dist/index.browser.js"></script>
+
+    <!-- Load jsPsych CSS styles -->
     <link href="https://cdn.jsdelivr.net/npm/jspsych@7.3.0/css/jspsych.css" rel="stylesheet" />
+
+    <!-- Optional: Hide the default body content -->
     <style>
       h1 {
-        display: none; /* Hide the loading message */
+        display: none;
       }
     </style>
   </head>
   <body>
     <h1>If you see this, the page is loading!</h1>
     <script>
+      // Initialize jsPsych
       const jsPsych = initJsPsych();
 
+      // Define a simple trial
       var hello_trial = {
-        type: 'jspsych-html-keyboard-response', // Corrected plugin name
+        type: 'jspsych-html-keyboard-response', // Correct plugin name for jsPsych 7.x
         stimulus: '<h2>Hello Mahsa! jsPsych is working 🎉<br><br>Press any key to finish.</h2>'
       };
 
+      // Run the experiment
       jsPsych.run([hello_trial]);
     </script>
   </body>
